@@ -2,6 +2,7 @@ const nodemailer = require('nodemailer')
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt');
 const User = require('../models/User');
+const validator = require('validator')
 
 const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -19,6 +20,14 @@ const authController = {
                 email,
                 password
             } = req.body
+
+            if (!validator.isEmail(email)) {
+                return res.json({ error: "Invalid email format" });
+            }
+
+            if (password.length < 6) {
+                return res.json({ Error: "Password must be at least 6 characters" });
+            }
 
             const checkuser = await User.findOne({
                 $or: [
