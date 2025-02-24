@@ -38,6 +38,15 @@ const authController = {
                 email: email,
                 password: hashpass
             })
+
+            const newresultuser = await newuser.save()
+
+            if(newresultuser){
+                return res.json({ Status: "Success"})
+            }
+            else{
+                return res.json({ Error: "Internal Server Error"})
+            }
         }
         catch(err){
             console.log(err)
