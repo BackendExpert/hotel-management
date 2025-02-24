@@ -2,7 +2,8 @@ const nodemailer = require('nodemailer')
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt');
 const User = require('../models/User');
-const validator = require('validator')
+const validator = require('validator');
+const PassResetToken = require('../models/PassResetToken');
 
 const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -99,7 +100,14 @@ const authController = {
                 return res.json({ Error: "User Cannot be found by given Email Address"})
             }
 
+            const optalreadyget = await PassResetToken.findOne({ email: email })
+
             
+
+            const otp = Array.from(crypto.randomFillSync(new Uint8Array(6)))
+            .map(byte => "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"[byte % 62])
+            .join('');
+
         }   
         catch(err){
             console.log(err)
