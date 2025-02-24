@@ -51,6 +51,33 @@ const authController = {
         catch(err){
             console.log(err)
         }
+    },
+
+    signin: async(req, res) => {
+        try{
+            const {
+                email,
+                password
+            } = req.body
+
+            const chechuser = await User.findOne({ email: email })
+
+            if(!chechuser){
+                return res.json({ Error: "User not found.."})
+            }
+
+            const checkpass = await bcrypt.compare(password, chechuser.password)
+
+            if(!checkpass){
+                return res.json({ Error: "Password not Match"})
+            }
+
+            const token = jwt.sign({ id: chechuser._id, role:chechuser.role }, process.env.JWT_SECRET);
+            return res.json({ Status: "Success", Result: chechuser, Token: token })
+        }
+        catch(err){
+            console.log(err)
+        }
     }
 };
 
