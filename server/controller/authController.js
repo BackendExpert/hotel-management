@@ -87,6 +87,23 @@ const authController = {
         catch(err){
             console.log(err)
         }
+    },
+
+    chechemailtogetpass: async(req, res) => {
+        try{
+            const { email } = req.body
+
+            const checkuser = await User.findOne({ email: email })
+
+            if(!checkuser){
+                return res.json({ Error: "User Cannot be found by given Email Address"})
+            }
+
+            
+        }   
+        catch(err){
+            console.log(err)
+        }
     }
 };
 
