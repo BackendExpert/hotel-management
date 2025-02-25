@@ -4,6 +4,7 @@ const bcrypt = require('bcrypt');
 const User = require('../models/User');
 const validator = require('validator');
 const PassResetToken = require('../models/PassResetToken');
+const crypto = require('crypto')
 
 const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -123,6 +124,19 @@ const authController = {
             const resultsaveotp = await newotp.save()
 
             if(resultsaveotp){
+                const mailOptions = {
+                    from: process.env.EMAIL_USER,
+                    to: email,
+                    subject: "Password Reset",
+                    html: `<h1>Password Reset OTP</h1>
+                            <p>Password Reset Token: ${otp}</p>
+                            <p>This token will be expired after 15min</p>
+                            <p>Thank you</p>
+                            <p>Admin</p>
+                    `
+                };
+                await transporter.sendMail(mailOptions);
+
                 const token = jwt.sign({ email: email }, process.env.JWT_SECRET);
                 return res.json({ Status: "Success", Token: token })
             }
