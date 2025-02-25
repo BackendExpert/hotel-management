@@ -115,9 +115,13 @@ const authController = {
             const defultTime = new Date(); 
             const expireAt = new Date(defultTime.getTime() + 15 * 60000);
 
+            const token = jwt.sign({ email: email }, process.env.JWT_SECRET);
+            
+
             const newotp = new PassResetToken({
                 email: email,
                 otp: hashotp,
+                token: token,
                 expire_at: expireAt
             })
 
@@ -137,7 +141,6 @@ const authController = {
                 };
                 await transporter.sendMail(mailOptions);
 
-                const token = jwt.sign({ email: email }, process.env.JWT_SECRET);
                 return res.json({ Status: "Success", Token: token })
             }
             else{
@@ -145,6 +148,31 @@ const authController = {
             }
 
         }   
+        catch(err){
+            console.log(err)
+        }
+    },
+
+    verifyotp: async(req,res) => {
+        try{
+            const { otp } = req.body
+            const token = req.params.token
+            const email = req.params.email
+            
+            const checkusertoken = await PassResetToken.findOne({
+                $or: [
+                    { token: token },
+                    { email: email },
+                ]
+            })
+
+            if(!checkusertoken){
+                return res.json({ Error: "User cannot be Authenticated"})
+            }
+
+            
+
+        }
         catch(err){
             console.log(err)
         }

@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const PassResetTokenSchema = new mongoose.Schema({
     email: { type: String, required: true},
     otp: { type: String, required: true},
+    token: { type: String, required: true},
     expire_at: { 
         type: Date, 
         required: true,
