@@ -157,14 +157,8 @@ const authController = {
         try{
             const { otp } = req.body
             const token = req.params.token
-            const email = req.params.email
-            
-            const checkusertoken = await PassResetToken.findOne({
-                $or: [
-                    { token: token },
-                    { email: email },
-                ]
-            })
+           
+            const checkusertoken = await PassResetToken.findOne({ token: token })
 
             if(!checkusertoken){
                 return res.json({ Error: "User cannot be Authenticated"})
