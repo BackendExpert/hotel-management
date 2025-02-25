@@ -175,9 +175,10 @@ const authController = {
             if(!matchotp){
                 return res.json({ Error: "OTP Not Match"})
             }
-
-            
-
+            else{
+                return res.json({ Status: "Success" })
+            }
+        
         }
         catch(err){
             console.log(err)
