@@ -110,6 +110,25 @@ const authController = {
             .map(byte => "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"[byte % 62])
             .join('');
 
+            const hashotp = await bcrypt.hash(otp, 10)
+            const defultTime = new Date(); 
+            const expireAt = new Date(defultTime.getTime() + 15 * 60000);
+
+            const newotp = new PassResetToken({
+                email: email,
+                otp: hashotp,
+                expire_at: expireAt
+            })
+
+            const resultsaveotp = await newotp.save()
+
+            if(resultsaveotp){
+                
+            }
+            else{
+                return res.json({ Error: "Internal Server Error"})
+            }
+
         }   
         catch(err){
             console.log(err)
