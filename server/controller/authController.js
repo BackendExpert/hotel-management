@@ -123,7 +123,8 @@ const authController = {
             const resultsaveotp = await newotp.save()
 
             if(resultsaveotp){
-                
+                const token = jwt.sign({ email: email }, process.env.JWT_SECRET);
+                return res.json({ Status: "Success", Token: token })
             }
             else{
                 return res.json({ Error: "Internal Server Error"})
