@@ -170,6 +170,12 @@ const authController = {
                 return res.json({ Error: "User cannot be Authenticated"})
             }
 
+            const matchotp = await bcrypt.compare(otp, checkusertoken.otp)
+
+            if(!matchotp){
+                return res.json({ Error: "OTP Not Match"})
+            }
+
             
 
         }
