@@ -102,7 +102,9 @@ const authController = {
 
             const optalreadyget = await PassResetToken.findOne({ email: email })
 
-            
+            if(optalreadyget){
+                return res.json({ Error: "User Already Request OTP, Check Email and Wait 15min and try again"})
+            }
 
             const otp = Array.from(crypto.randomFillSync(new Uint8Array(6)))
             .map(byte => "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"[byte % 62])
