@@ -60,6 +60,34 @@ const Nav = () => {
             </div>
         </div>
       </div>
+      <div className={`absolute bg-[#4e5c4a] right-4 left-4 top-24 py-4 px-8 mt-1 rounded shadow-xl transition-all duration-300 transform 
+        ${opennav ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-95 pointer-events-none'}`}>
+
+            <div className="">
+                {
+                    navdata.map((data, index) => {
+                        return (
+                            <div className="text-white" key={index}>
+                                <h1 className="text-xl uppercase font-semibold">{data.name}</h1>
+                                <div className="my-4 ml-5">
+                                    {
+                                        data.submenu.map((submenudata, submenuindex) => {
+                                            return(
+                                                <div className="my-2" key={submenuindex}>
+                                                    <h1 className="">{submenudata.name}</h1>
+                                                </div>
+                                            )
+                                        })
+                                    }
+                                </div>
+                            </div>
+                        )
+                    })
+                }
+            </div>
+           
+        
+      </div>
     </div>
   );
 }
