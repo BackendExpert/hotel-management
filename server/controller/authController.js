@@ -171,8 +171,7 @@ const authController = {
             }
             else{
                 return res.json({ Status: "Success" })
-            }
-        
+            }        
         }
         catch(err){
             console.log(err)
