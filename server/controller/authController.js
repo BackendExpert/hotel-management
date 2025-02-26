@@ -181,15 +181,22 @@ const authController = {
     updatepassword: async(req, res) => {
         try{
             const {
-                email,
                 newpassword,
                 newcpass
             } = req.body
-
+            
             const token = req.params.token
+
+            const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+            const email = decoded.email
 
             if(!token){
                 return res.json({ Error: "The Token is not provided"})
+            }
+
+            if (newpassword.length < 6) {
+                return res.json({ Error: "Password must be at least 6 characters" });
             }
 
             if(newpassword !== newcpass){
