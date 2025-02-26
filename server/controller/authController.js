@@ -208,7 +208,20 @@ const authController = {
                 return res.json({ Error: "User cannot be Authenticated"})
             }
 
-            
+            const hashpass = await bcrypt.hash(newpassword, 10)
+
+            const updateuserpass = await User.findOneAndUpdate(
+                { email: email },
+                { password: hashpass },
+                { new: true }
+            )
+
+            if(updateuserpass){
+                return res.json({ Status: "Success" })
+            }
+            else{
+                return res.json({ Error: "Internal Server Error"})
+            }
         }
         catch(err){
             console.log(err)
