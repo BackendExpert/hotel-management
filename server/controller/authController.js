@@ -176,6 +176,43 @@ const authController = {
         catch(err){
             console.log(err)
         }
+    },
+
+    updatepassword: async(req, res) => {
+        try{
+            const {
+                email,
+                newpassword,
+                newcpass
+            } = req.body
+
+            const token = req.params.token
+
+            if(!token){
+                return res.json({ Error: "The Token is not provided"})
+            }
+
+            if(newpassword !== newcpass){
+                return res.json({ Errror: "Passwords are not match"})
+            }
+
+            const checkuser = await User.findOne({ email: email })
+
+            if(!checkuser){
+                return res.json({ Error: "No User found by given Email Address"})
+            }
+
+            const checkusertoken = await PassResetToken.findOne({ token: token })
+
+            if(!checkusertoken){
+                return res.json({ Error: "User cannot be Authenticated"})
+            }
+
+            
+        }
+        catch(err){
+            console.log(err)
+        }
     }
 };
 
