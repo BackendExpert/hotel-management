@@ -217,6 +217,7 @@ const authController = {
             )
 
             if(updateuserpass){
+                const deletetoken = await PassResetToken.findOneAndDelete({ token: token })
                 return res.json({ Status: "Success" })
             }
             else{
