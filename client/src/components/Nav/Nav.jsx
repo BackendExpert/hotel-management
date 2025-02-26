@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaStar } from "react-icons/fa6";
 import DefultBtn from '../Buttons/DefultBtn';
+import { navdata } from './NavData';
 
 const Nav = () => {
   return (
@@ -23,9 +24,19 @@ const Nav = () => {
           </div>
         </div>
         <div className="">
-            <div className="">
-                <div className=""></div>
-                <div className="">
+            <div className="flex">
+                <div className="flex mr-8">
+                    {
+                        navdata.map((data, index) => {
+                            return (
+                                <div className="mx-8 uppercase text-lg mt-2" key={index}>
+                                    <h1 className="">{data.name}</h1>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+                <div className="mt-1">
                     <DefultBtn 
                         type={'button'}
                         btnvlaue={'Book Now'}
