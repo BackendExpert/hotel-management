@@ -3,6 +3,7 @@ import { FaStar } from "react-icons/fa6";
 import DefultBtn from '../Buttons/DefultBtn';
 import { navdata } from './NavData';
 import { RiMenu4Fill, RiCloseLargeFill } from "react-icons/ri";
+import { Link } from 'react-router-dom';
 
 
 const Nav = () => {
@@ -68,13 +69,24 @@ const Nav = () => {
                     navdata.map((data, index) => {
                         return (
                             <div className="text-white" key={index}>
-                                <h1 className="text-xl uppercase font-semibold">{data.name}</h1>
+                                { data.submenu.length > 0 ? (
+                                    <h1 className="text-xl uppercase font-semibold">{data.name}</h1>
+                                ) : (
+                                    <h1 className="text-xl uppercase font-semibold">
+                                        <Link to={data.link}>
+                                            {data.name}
+                                        </Link>
+                                    </h1>
+                                )}
+                                
                                 <div className="my-4 ml-5">
                                     {
                                         data.submenu.map((submenudata, submenuindex) => {
                                             return(
                                                 <div className="my-2" key={submenuindex}>
-                                                    <h1 className="">{submenudata.name}</h1>
+                                                    <Link to={submenudata.link}>
+                                                        <h1 className="">{submenudata.name}</h1>
+                                                    </Link>
                                                 </div>
                                             )
                                         })
