@@ -39,22 +39,27 @@ const navdata = [
         submenu: [
             {
                 id: 1,
-                name: "About Hotem",
+                name: "About Hotel",
                 link: "#"
             },
             {
-                id: 1,
+                id: 2,
                 name: "Restaurant & Bars",
                 link: "#"
             },
             {
-                id: 1,
+                id: 3,
                 name: "Spa",
                 link: "#"
             },
             {
-                id: 1,
+                id: 4,
                 name: "Events",
+                link: "#"
+            },
+            {
+                id: 4,
+                name: "Trips",
                 link: "#"
             },
         ]
