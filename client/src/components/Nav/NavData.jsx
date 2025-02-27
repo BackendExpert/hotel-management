@@ -60,7 +60,7 @@ const navdata = [
             {
                 id: 4,
                 name: "Trips",
-                link: "#"
+                link: "/local-activities"
             },
         ]
     },
