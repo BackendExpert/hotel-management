@@ -4,6 +4,7 @@ import BookSectionHome from './BookSectionHome'
 import WelcomeHotel from './WelcomeHotel'
 import TopRooms from './TopRooms'
 import Services from './Services'
+import Experience from './Experience'
 
 const Home = () => {
   return (
@@ -18,6 +19,9 @@ const Home = () => {
         </div>
         <div className="">
           <Services />
+        </div>
+        <div className="">
+          <Experience />
         </div>
     </div>
   )
