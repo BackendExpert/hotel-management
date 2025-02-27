@@ -41,7 +41,7 @@ const Experience = () => {
 
             <div className="mt-4">
                 <center>
-                    <Link>
+                    <Link to={'/local-activities'}>
                         <button className='bg-[#4e5c4a] text-white py-2 px-8'>
                             View More Outdoor Activities
                         </button>
