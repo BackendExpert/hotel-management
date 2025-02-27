@@ -1,14 +1,15 @@
 import React from 'react'
 import HeroSection from './HeroSection'
 import BookSectionHome from './BookSectionHome'
+import WelcomeHotel from './WelcomeHotel'
 
 const Home = () => {
   return (
     <div className='mt-24 bg-[#e0e1df]'>
         <HeroSection />
         <BookSectionHome />
-        <div className="">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nesciunt atque sit sapiente quo, eligendi maiores commodi possimus quasi illo eum dolorem, voluptas sequi impedit voluptate modi, assumenda ratione rem.
+        <div className="pb-16">
+          <WelcomeHotel />
         </div>
     </div>
   )

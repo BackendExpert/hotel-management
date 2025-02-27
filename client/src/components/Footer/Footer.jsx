@@ -13,16 +13,16 @@ const Footer = () => {
 
             <div className="relative text-white xl:px-32 md:px-24 px-8">
                 <div className="xl:flex">
-                    <div className="w-1/3">
-                        <h1 className="text-white font-semibold uppercase md:tracking-[.5em] text-3xl">
+                    <div className="xl:w-1/3">
+                        <h1 className="text-white font-semibold uppercase md:tracking-[.5em] text-3xl xl:text-left text-center">
                             MyHotels
                         </h1>
-                        <p className="pt-4">
+                        <p className="pt-4 xl:text-left text-center">
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus laudantium sequi odio corrupti expedita optio saepe doloremque ad voluptatibus totam eveniet, ullam repellat sed itaque veritatis amet ab aperiam harum?
                         </p>
                     </div>
-                    <div className="w-2/3 xl:ml-8">
-                        <div className="xl:grid grid-cols-3 gap-4">
+                    <div className="xl:w-2/3 xl:ml-8 md:mt-0 mt-8">
+                        <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-4 xl:mt-0 md:mt-8">
                             {
                                 footerdata.map((data, index) => {
                                     return (
