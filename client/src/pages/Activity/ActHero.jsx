@@ -1,6 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import DefultBtn from '../../components/Buttons/DefultBtn'
 
 const ActHero = () => {
   return (
