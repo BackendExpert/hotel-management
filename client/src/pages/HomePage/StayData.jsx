@@ -5,32 +5,38 @@ const staydata = [
     {
         id: 1,
         name: 'Youtube',
-        icon: FaYoutube
+        icon: FaYoutube,
+        link: '#'
     },
     {
         id: 2,
         name: 'Facebook',
-        icon: FaFacebook
+        icon: FaFacebook,
+        link: '#'
     },
     {
         id: 3,
         name: 'Linkedin',
-        icon: FaLinkedin
+        icon: FaLinkedin,
+        link: '#'
     },
     {
         id: 4,
         name: 'Instagram',
-        icon: FaInstagramSquare
+        icon: FaInstagramSquare,
+        link: '#'
     },
     {
         id: 5,
         name: 'Twitter',
-        icon: FaSquareXTwitter
+        icon: FaSquareXTwitter,
+        link: '#'
     },
     {
         id: 6,
         name: 'Tripadvisor',
-        icon: FaTripadvisor
+        icon: FaTripadvisor,
+        link: '#'
     }
 ]
 
