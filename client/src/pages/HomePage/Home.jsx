@@ -2,6 +2,7 @@ import React from 'react'
 import HeroSection from './HeroSection'
 import BookSectionHome from './BookSectionHome'
 import WelcomeHotel from './WelcomeHotel'
+import TopRooms from './TopRooms'
 
 const Home = () => {
   return (
@@ -10,6 +11,9 @@ const Home = () => {
         <BookSectionHome />
         <div className="pb-16">
           <WelcomeHotel />
+        </div>
+        <div className="">
+          <TopRooms />
         </div>
     </div>
   )
