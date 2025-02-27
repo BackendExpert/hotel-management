@@ -19,7 +19,7 @@ const experiencedata = [
         id: 3,
         name: 'Camping Tour',
         price: '150',
-        img: 'https://wallpapercave.com/wp/wp14684322.jpg',
+        img: 'https://wallpapercave.com/wp/wp4617428.jpg',
         desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore perferendis et sunt nobis quae corrupti error aut voluptatum mollitia ipsam. Nostrum cum illum fugiat ipsa a, commodi nam numquam. Deserunt.',
         category: 'outdoor',
     }
