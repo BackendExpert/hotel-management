@@ -1,3 +1,9 @@
+import { FaBed, FaHandHoldingHeart  } from "react-icons/fa6";
+import { LuBeer } from "react-icons/lu";
+import { FaSwimmingPool } from "react-icons/fa";
+import { MdBusinessCenter, MdOutlineEmojiTransportation } from "react-icons/md";
+
+
 const servicedata = [   
     {
         id: 1,
@@ -20,7 +26,7 @@ const servicedata = [
                 name: 'Laundry & Dry Cleaning'
             },
         ],
-        icon: "",
+        icon: FaBed,
     },
 
     {
@@ -48,7 +54,7 @@ const servicedata = [
                 name: 'In-Room Dining'
             },
         ],
-        icon: "",
+        icon: LuBeer,
     },
 
 
@@ -73,7 +79,7 @@ const servicedata = [
                 name: 'Outdoor Activities (Hiking, Cycling, etc.)'
             },
         ],
-        icon: "",
+        icon: FaSwimmingPool,
     },
 
     {
@@ -93,7 +99,7 @@ const servicedata = [
                 name: 'Business Center with Printing & WiFi'
             },
         ],
-        icon: "",
+        icon: MdBusinessCenter,
     },
 
     {
@@ -113,7 +119,7 @@ const servicedata = [
                 name: 'Tour Packages & Sightseeing Assistance'
             },
         ],
-        icon: "",
+        icon: MdOutlineEmojiTransportation,
     },
 
 
@@ -142,7 +148,7 @@ const servicedata = [
                 name: 'Pet-Friendly Services (if applicable)'
             },
         ],
-        icon: "",
+        icon: FaHandHoldingHeart,
     },
 ]
 
