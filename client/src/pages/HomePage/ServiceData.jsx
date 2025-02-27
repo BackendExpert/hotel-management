@@ -1,7 +1,7 @@
 import { FaBed, FaHandHoldingHeart  } from "react-icons/fa6";
-import { LuBeer } from "react-icons/lu";
 import { FaSwimmingPool } from "react-icons/fa";
 import { MdBusinessCenter, MdOutlineEmojiTransportation } from "react-icons/md";
+import { BiSolidDrink } from "react-icons/bi";
 
 
 const servicedata = [   
@@ -54,7 +54,7 @@ const servicedata = [
                 name: 'In-Room Dining'
             },
         ],
-        icon: LuBeer,
+        icon: BiSolidDrink,
     },
 
 
