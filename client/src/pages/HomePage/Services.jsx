@@ -3,7 +3,7 @@ import { servicedata } from './ServiceData'
 
 const Services = () => {
   return (
-    <div className="bg-[#4e5c4a] py-16 xl:px-28 md:px-12 px-4">
+    <div className="bg-[#4e5c4a] py-16 xl:px-28 md:px-12 px-4 mb-16">
         <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-6">
             {
                 servicedata.map((service, index) => {
