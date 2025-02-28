@@ -9,7 +9,7 @@ const AcvitityContent = () => {
             {
                 experiencedata.map((data, index) => {
                     return (
-                        <div className="bg-white rounded shadow-lg" key={index}>
+                        <div data-aos="zoom-in" className="bg-white rounded shadow-lg" key={index}>
                             <div className="block relative bg-cover bg-center p-4 h-80" style={{ backgroundImage: `url(${data.img})` }}>
                                 <div className='absolute inset-0 bg-black opacity-40'></div>
                                 <div className="mt-4">
