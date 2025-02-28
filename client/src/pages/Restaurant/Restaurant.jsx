@@ -2,7 +2,11 @@ import React from 'react'
 
 const Restaurant = () => {
   return (
-    <div>Restaurant</div>
+    <div className='pt-24 bg-[#e0e1df]'>
+        <div className="">
+            hi all
+        </div>
+    </div>
   )
 }
 
