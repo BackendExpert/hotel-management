@@ -79,14 +79,14 @@ const Nav = () => {
 
                       {/* Submenu */}
                       {dksubmenu === data.id && data.submenu.length > 0 && (
-                        <div className="absolute top-16 -left-8 p-4 rounded-md bg-[#4e5c4a] text-white shadow-lg z-50 pt-4 w-48">
-                            <div className="my-2 ">
+                        <div className="absolute top-16 -left-8 rounded-md bg-[#4e5c4a] text-white shadow-lg z-50 w-72">
+                            <div className="">
                             {data.submenu.map((submenudata, submenuindex) => (
-                                <div key={submenuindex} className='my-2'>
-                                    <a href={submenudata.link}>
-                                        <h1>{submenudata.name}</h1>
-                                    </a>
+                              <a href={submenudata.link}>
+                                <div key={submenuindex} className='py-6 text-center hover:bg-[#a4805a] duration-500'>                                    
+                                  <h1>{submenudata.name}</h1>                                    
                                 </div>
+                              </a>
                             ))}
                             </div>
                         </div>
