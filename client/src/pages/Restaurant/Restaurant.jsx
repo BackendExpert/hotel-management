@@ -3,6 +3,7 @@ import ResHeroSection from './ResHeroSection'
 import ResInfor from './ResInfor'
 import WhyDineUs from './WhyDineUs'
 import ThreeFoodRes from './ThreeFoodRes'
+import BarRes from './BarRes'
 
 
 const Restaurant = () => {
@@ -19,6 +20,9 @@ const Restaurant = () => {
         </div>
         <div className="">
             <ThreeFoodRes />
+        </div>
+        <div className="">
+            <BarRes />
         </div>
     </div>
   )
