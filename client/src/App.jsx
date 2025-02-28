@@ -5,7 +5,7 @@ import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
 import Activity from "./pages/Activity/Activity";
 import AboutHotel from "./pages/AboutHotel/AboutHotel";
-
+import 'aos/dist/aos.css';
 
 
 export default function App() {
