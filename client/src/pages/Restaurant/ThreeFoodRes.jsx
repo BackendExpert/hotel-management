@@ -52,7 +52,7 @@ const ThreeFoodRes = () => {
                 <div className="py-8 xl:px-12 px-8">
                     <div className="flex">
                         <MdOutlineAccessTime className='h-6 w-auto fill-gray-500'/>
-                        <p className="pl-2 text-gray-500">7:00 AM - 10:30 AM</p>
+                        <p className="pl-2 text-gray-500">12:00 PM - 10:00 PM</p>
                     </div>
                     <div className="mt-4">
                         <p className="">Savor the finest flavors from around the world:</p>
