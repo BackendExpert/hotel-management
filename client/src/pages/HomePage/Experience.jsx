@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const Experience = () => {
   return (
     <div className="xl:py-8">
-        <div className="text-center">
+        <div data-aos="zoom-in" className="text-center">
             <h1 className="uppercase font-semibold text-[#4e5c4a]">just more than hotel booking</h1>
             <h1 className="text-3xl text-gray-500 mt-4">Impressive Experience with MyHotels</h1>
         </div>
@@ -16,7 +16,7 @@ const Experience = () => {
                 {
                     experiencedata.map((data, index) => {
                         return (
-                            <div className="bg-white rounded shadow-lg" key={index}>
+                            <div data-aos="zoom-in" className="bg-white rounded shadow-lg" key={index}>
                                 <div className="block relative bg-cover bg-center p-4 h-80" style={{ backgroundImage: `url(${data.img})` }}>
                                     <div className='absolute inset-0 bg-black opacity-40'></div>
                                     <div className="mt-4">
@@ -39,7 +39,7 @@ const Experience = () => {
                 }
             </div>
 
-            <div className="mt-4">
+            <div data-aos="zoom-in" className="mt-4">
                 <center>
                     <Link to={'/local-activities'}>
                         <button className='bg-[#4e5c4a] text-white py-2 px-8'>

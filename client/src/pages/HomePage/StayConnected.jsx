@@ -28,7 +28,7 @@ const StayConnected = () => {
                         {
                             staydata.map((stay, index) => {
                                 return (
-                                    <div className="" key={index}>
+                                    <div data-aos="zoom-in" className="" key={index}>
                                         <div className="flex">
                                             <stay.icon className='h-8 w-auto fill-[#a4805a]' />
                                             <Link to={stay.link}>
@@ -42,7 +42,7 @@ const StayConnected = () => {
 
                 </div>
             </div>
-            <div className="md:w-1/2 xl:px-16 px-4 bg-white py-8 rounded shadow-xl">
+            <div data-aos="zoom-in" className="md:w-1/2 xl:px-16 px-4 bg-white py-8 rounded shadow-xl">
                 <form method="post">
                     <h1 className="text-[#4e5c4a] font-semibold text-xl">Subscribe to NEWS Latter</h1>
                     <DefultInput 

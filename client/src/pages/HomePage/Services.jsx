@@ -8,7 +8,7 @@ const Services = () => {
             {
                 servicedata.map((service, index) => {
                     return (
-                        <div className="" key={index}>
+                        <div data-aos="zoom-in" className="" key={index}>
                             <div className="flex">
                                 <service.icon className='h-12 w-auto fill-[#a4805a]' />
                                 <h1 className="text-white pl-4 pt-1 text-2xl">{service.name}</h1>
