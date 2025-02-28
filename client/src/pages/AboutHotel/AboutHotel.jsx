@@ -1,6 +1,7 @@
 import React from 'react'
 import AboutHero from './AboutHero'
 import HotelInfo from './HotelInfo'
+import HotelService from './HotelService'
 
 const AboutHotel = () => {
   return (
@@ -10,6 +11,9 @@ const AboutHotel = () => {
         </div>
         <div className="">
             <HotelInfo />
+        </div>
+        <div className="">
+            <HotelService />
         </div>
     </div>
   )
