@@ -4,6 +4,7 @@ import ResInfor from './ResInfor'
 import WhyDineUs from './WhyDineUs'
 import ThreeFoodRes from './ThreeFoodRes'
 import BarRes from './BarRes'
+import Promotions from './Promotions'
 
 
 const Restaurant = () => {
@@ -23,6 +24,9 @@ const Restaurant = () => {
         </div>
         <div className="">
             <BarRes />
+        </div>
+        <div className="pb-16">
+            <Promotions />
         </div>
     </div>
   )
