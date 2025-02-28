@@ -40,7 +40,7 @@ const navdata = [
             {
                 id: 1,
                 name: "About Hotel",
-                link: "#"
+                link: "/about-hotel"
             },
             {
                 id: 2,
