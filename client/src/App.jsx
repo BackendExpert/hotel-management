@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 import Activity from "./pages/Activity/Activity";
 import AboutHotel from "./pages/AboutHotel/AboutHotel";
 import 'aos/dist/aos.css';
+import Restaurant from "./pages/Restaurant/Restaurant";
 
 
 export default function App() {
@@ -57,6 +58,7 @@ export default function App() {
         <Route path="/" element={<Home /> } />
         <Route path="/local-activities" element={<Activity />} />
         <Route path="/about-hotel" element={<AboutHotel /> } /> 
+        <Route path="/hotel-restaurant" element={<Restaurant /> } />
       </Routes>
       {shouldShowFooter && <Footer />}
     </BrowserRouter>

@@ -55,7 +55,7 @@ const navdata = [
             {
                 id: 2,
                 name: "Restaurant & Bars",
-                link: "#"
+                link: "/hotel-restaurant"
             },
             {
                 id: 3,
