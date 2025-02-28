@@ -4,6 +4,7 @@ import Home from "./pages/HomePage/Home";
 import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
 import Activity from "./pages/Activity/Activity";
+import AboutHotel from "./pages/AboutHotel/AboutHotel";
 
 
 
@@ -55,6 +56,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home /> } />
         <Route path="/local-activities" element={<Activity />} />
+        <Route path="/about-hotel" element={<AboutHotel /> } /> 
       </Routes>
       {shouldShowFooter && <Footer />}
     </BrowserRouter>

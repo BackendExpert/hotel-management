@@ -70,9 +70,9 @@ const Nav = () => {
                           <div className='cursor-pointer'>{data.name}</div>
                         ) : (
                           <div>
-                            <Link to={data.link}>
+                            <a href={data.link}>
                                 {data.name}
-                            </Link>
+                            </a>
                           </div>
                         )
                       }
@@ -83,9 +83,9 @@ const Nav = () => {
                             <div className="my-2 ">
                             {data.submenu.map((submenudata, submenuindex) => (
                                 <div key={submenuindex} className='my-2'>
-                                    <Link to={submenudata.link}>
+                                    <a href={submenudata.link}>
                                         <h1>{submenudata.name}</h1>
-                                    </Link>
+                                    </a>
                                 </div>
                             ))}
                             </div>
@@ -119,9 +119,9 @@ const Nav = () => {
                     <h1 className="text-xl uppercase font-semibold">{data.name}</h1>
                   ) : (
                     <h1 className="text-xl uppercase font-semibold">
-                      <Link to={data.link}>
+                      <a href={data.link}>
                         {data.name}
-                      </Link>
+                      </a>
                     </h1>
                   )}
 
@@ -130,9 +130,9 @@ const Nav = () => {
                       data.submenu.map((submenudata, submenuindex) => {
                         return (
                           <div className="my-2" key={submenuindex}>
-                            <Link to={submenudata.link}>
+                            <a href={submenudata.link}>
                               <h1>{submenudata.name}</h1>
-                            </Link>
+                            </a>
                           </div>
                         );
                       })
