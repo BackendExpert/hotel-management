@@ -3,6 +3,10 @@ import AboutHero from './AboutHero'
 import HotelInfo from './HotelInfo'
 import HotelService from './HotelService'
 import FoodHotel from './FoodHotel'
+import FacilitiesHotel from './FacilitiesHotel'
+import Event from './Event'
+import Transportation from './Transportation'
+import WhyHotel from './WhyHotel'
 
 const AboutHotel = () => {
   return (
@@ -18,6 +22,18 @@ const AboutHotel = () => {
         </div>
         <div className="">
             <FoodHotel />
+        </div>
+        <div className="">
+            <FacilitiesHotel />
+        </div>
+        <div className="">
+            <Event />
+        </div>
+        <div className="">
+            <Transportation />
+        </div>
+        <div className="">
+            <WhyHotel />
         </div>
     </div>
   )
