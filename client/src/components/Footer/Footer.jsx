@@ -13,7 +13,7 @@ const Footer = () => {
 
             <div className="relative text-white xl:px-32 md:px-24 px-8">
                 <div className="xl:flex">
-                    <div className="xl:w-1/3">
+                    <div data-aos="zoom-in" className="xl:w-1/3">
                         <h1 className="text-white font-semibold uppercase md:tracking-[.5em] text-3xl xl:text-left text-center">
                             MyHotels
                         </h1>
@@ -26,7 +26,7 @@ const Footer = () => {
                             {
                                 footerdata.map((data, index) => {
                                     return (
-                                        <div className="" key={index}>
+                                        <div data-aos="zoom-in" className="" key={index}>
                                             <h1 className="font-semibold text-lg uppercase tracking-[.5em]">{data.name}</h1>
                                         
                                             <div className="mt-4">
@@ -46,7 +46,7 @@ const Footer = () => {
                                     )
                                 })
                             }
-                            <div className="">
+                            <div data-aos="zoom-in" className="">
                                 <h1 className="font-semibold text-lg uppercase tracking-[.5em]">Reach Out</h1>
 
                                 <div className="mt-4">

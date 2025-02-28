@@ -6,6 +6,7 @@ import TopRooms from './TopRooms'
 import Services from './Services'
 import Experience from './Experience'
 import StayConnected from './StayConnected'
+import Seasonal from './Seasonal'
 
 const Home = () => {
   return (
@@ -13,6 +14,9 @@ const Home = () => {
         <HeroSection />
         <BookSectionHome />
         <div className="pb-16">
+          <Seasonal />
+        </div>
+        <div className="">
           <WelcomeHotel />
         </div>
         <div className="">

@@ -29,6 +29,16 @@ const navdata = [
                 id: 4,
                 name: "Deluxe Double Room",
                 link: "#"
+            },
+            {
+                id: 5,
+                name: "Suites",
+                link: "#"
+            },
+            {
+                id: 6,
+                name: "Villas",
+                link: "#"
             }
         ]
     },
