@@ -1,14 +1,9 @@
 import React from 'react'
 
-const HotelInfo = () => {
+const FoodHotel = () => {
   return (
-    <div className="py-24">
-        <h1 className="text-center uppercase md:text-3xl font-semibold tracking-[.5em]">About JehanKandyHotels</h1>
-        <p className="md:px-24 px-8 text-center mt-4">
-            Welcome to <b>JehanKandyHotels</b>, your gateway to luxury, comfort, and breathtaking experiences in the heart of Kandy. Whether you’re visiting for a relaxing vacation, a romantic getaway, or a business trip, we ensure an unforgettable stay with world-class hospitality, elegant accommodations, and outstanding services tailored to your needs.
-        </p>
-
-        <div className="md:mx-24 mx-4 mt-16" >
+    <div className="pb-24">
+        <div className="md:mx-24 mx-4 mt-16">
             <div className="xl:flex">
                 <div className="py-60 w-full block relative bg-[url(https://wallpapercave.com/wp/wp12672119.jpg)] bg-cover bg-center">
                     <div className='absolute inset-0 bg-black opacity-60'></div>
@@ -30,4 +25,4 @@ const HotelInfo = () => {
   )
 }
 
-export default HotelInfo
+export default FoodHotel

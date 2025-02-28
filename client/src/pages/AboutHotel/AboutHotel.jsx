@@ -2,6 +2,7 @@ import React from 'react'
 import AboutHero from './AboutHero'
 import HotelInfo from './HotelInfo'
 import HotelService from './HotelService'
+import FoodHotel from './FoodHotel'
 
 const AboutHotel = () => {
   return (
@@ -14,6 +15,9 @@ const AboutHotel = () => {
         </div>
         <div className="">
             <HotelService />
+        </div>
+        <div className="">
+            <FoodHotel />
         </div>
     </div>
   )

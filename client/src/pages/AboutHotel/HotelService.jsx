@@ -2,7 +2,7 @@ import React from 'react'
 
 const HotelService = () => {
   return (
-    <div className="pb-24">
+    <div className="pb-24" data-aos="zoom-in-up">
         <div className="md:mx-24 mx-4 mt-16">
             <div className="xl:flex">
                 <div className="w-full bg-white flex flex-col items-center justify-center text-center p-8">
