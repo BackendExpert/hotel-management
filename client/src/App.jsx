@@ -9,6 +9,7 @@ import 'aos/dist/aos.css';
 import Restaurant from "./pages/Restaurant/Restaurant";
 
 
+
 export default function App() {
   const [showNavBar, setShowNavBar] = useState(true);
   const [isTopOfPage, setIsTopOfPage] = useState(true);
