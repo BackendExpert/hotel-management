@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import LoginInput from '../../components/Form/LoginInput';
 import DefultBtn from '../../components/Buttons/DefultBtn';
+import secureLocalStorage  from 'react-secure-storage'
 
 const StaffLogin = () => {
     const [stafflogin, setstafflogin] = useState({
@@ -46,7 +47,7 @@ const StaffLogin = () => {
             <h1 className="text-2xl font-semibold text-gray-500">Staff Login</h1>
 
             <div className="mt-8">
-                <div className="w-1/2">
+                <div className="xl:w-1/2">
                     <form onSubmit={headlesubmit} method="post">
                         <div className="py-2">
                             <p className="">Staff ID: </p>
