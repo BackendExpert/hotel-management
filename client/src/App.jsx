@@ -8,6 +8,7 @@ import AboutHotel from "./pages/AboutHotel/AboutHotel";
 import 'aos/dist/aos.css';
 import Restaurant from "./pages/Restaurant/Restaurant";
 import HotelRoom from "./pages/HotelRooms/HotelRoom";
+import StaffLogin from "./pages/StaffAuth/StaffLogin";
 
 
 
@@ -62,6 +63,7 @@ export default function App() {
         <Route path="/about-hotel" element={<AboutHotel /> } /> 
         <Route path="/hotel-restaurant" element={<Restaurant /> } />
         <Route path="/hotel-room/:roomtype" element={<HotelRoom /> } />
+        <Route path="/staff-login" element={<StaffLogin /> } />
         
       </Routes>
       {shouldShowFooter && <Footer />}
