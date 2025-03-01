@@ -5,7 +5,9 @@ const HotelRoom = () => {
     const {roomtype} = useParams()
   return (
     <div className='pt-24 bg-[#e0e1df]'>
-        
+        <div className="">
+            
+        </div>
     </div>
   )
 }
