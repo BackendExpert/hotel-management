@@ -1,16 +1,18 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import LoginInput from '../../components/Form/LoginInput';
+import DefultBtn from '../../components/Buttons/DefultBtn';
 
 const StaffLogin = () => {
     const [stafflogin, setstafflogin] = useState({
         staffid: '',
         email: '',
-        passworkd: '',
+        password: '',
     })
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        setsignupdata((prevData) => ({
+        setstafflogin((prevData) => ({
           ...prevData,
           [name]: value
         }));
@@ -41,8 +43,56 @@ const StaffLogin = () => {
   return (
     <div className='pt-24 xl:px-24 md:px-10 px-8 bg-[#e0e1df]'>
         <div className="py-16">
-            hi all
+            <h1 className="text-2xl font-semibold text-gray-500">Staff Login</h1>
+
+            <div className="mt-8">
+                <div className="w-1/2">
+                    <form onSubmit={headlesubmit} method="post">
+                        <div className="py-2">
+                            <p className="">Staff ID: </p>
+                            <LoginInput 
+                                type={'text'}
+                                placeholder={"Staff ID"}
+                                name={'staffid'}
+                                value={stafflogin.staffid}
+                                required={true}      
+                                onChange={handleInputChange}                          
+                            />
+                        </div>
+                        <div className="py-2">
+                            <p className="">Password : </p>
+                            <LoginInput 
+                                type={'email'}
+                                placeholder={"Staff Email"}
+                                name={'email'}
+                                value={stafflogin.email}
+                                required={true}      
+                                onChange={handleInputChange}                          
+                            />
+                        </div>
+                        <div className="py-2">
+                            <p className="">Staff Password: </p>
+                            <LoginInput 
+                                type={'password'}
+                                placeholder={"Staff Password"}
+                                name={'password'}
+                                value={stafflogin.password}
+                                required={true}      
+                                onChange={handleInputChange}                          
+                            />
+                        </div>
+
+                        <div className="mt-2">
+                            <DefultBtn 
+                                type={'submit'}
+                                btnvlaue={'Login as Staff'}
+                            />
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
+
     </div>
   )
 }
