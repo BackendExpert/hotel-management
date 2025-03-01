@@ -39,8 +39,10 @@ const StaffLogin = () => {
         }
     }
   return (
-    <div>
-
+    <div className='pt-24 xl:px-24 md:px-10 px-8 bg-[#e0e1df]'>
+        <div className="py-16">
+            hi all
+        </div>
     </div>
   )
 }
