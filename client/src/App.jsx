@@ -62,6 +62,7 @@ export default function App() {
         <Route path="/about-hotel" element={<AboutHotel /> } /> 
         <Route path="/hotel-restaurant" element={<Restaurant /> } />
         <Route path="/hotel-room/:roomtype" element={<HotelRoom /> } />
+        
       </Routes>
       {shouldShowFooter && <Footer />}
     </BrowserRouter>
