@@ -13,32 +13,50 @@ const navdata = [
             {
                 id: 1,
                 name: "Single Room",
-                link: "#"
+                link: "/hotel-room/single-room",
+                code: 'SR'
             },
             {
                 id: 2,
                 name: "Double Room",
-                link: "#"
+                link: "/hotel-room/double-room",
+                code: "DR"
             },
             {
                 id: 3,
                 name: "Family Room",
-                link: "#"
+                link: "/hotel-room/family-room",
+                code: "FR"
             },
             {
                 id: 4,
                 name: "Deluxe Double Room",
-                link: "#"
+                link: "/hotel-room/delux-double-room",
+                code: "DDR"
             },
             {
                 id: 5,
-                name: "Suites",
-                link: "#"
+                name: "Executive Suite",
+                link: "/hotel-room/executive-suite",
+                code: "ES"
+            },
+            {
+                id: 5,
+                name: "Presidential Suite",
+                link: "/hotel-room/presidential-suite",
+                code: "PS"
+            },
+            {
+                id: 5,
+                name: "Honeymoon Suite",
+                link: "/hotel-room/honeymoon-suite",
+                code: "HS"
             },
             {
                 id: 6,
-                name: "Villas",
-                link: "#"
+                name: "Royal Villa",
+                link: "/hotel-room/royal-villa",
+                code: "RV"
             }
         ]
     },
@@ -56,16 +74,6 @@ const navdata = [
                 id: 2,
                 name: "Restaurant & Bars",
                 link: "/hotel-restaurant"
-            },
-            {
-                id: 3,
-                name: "Spa",
-                link: "#"
-            },
-            {
-                id: 4,
-                name: "Events",
-                link: "#"
             },
             {
                 id: 4,
