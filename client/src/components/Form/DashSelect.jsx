@@ -21,7 +21,7 @@ const DashSelect = ({ name, optons, required, defaultoption, onChange }) => {
         {
             optons.map((opt, index) => {
                 return (
-                    <option value={otp.value}>{opt.name}</option>
+                    <option key={index} value={opt.value}>{opt.name}</option>
                 )
             })
         }

@@ -3,6 +3,7 @@ import { MdAddCircle } from "react-icons/md";
 import DashInput from '../../components/Form/DashInput';
 import DashTextArea from '../../components/Form/DashTextArea';
 import DashImgeInput from '../../components/Form/DashImgeInput';
+import DashSelect from '../../components/Form/DashSelect';
 
 const AddRooms = () => {
     const [roomdata, setroomdata] = useState({
@@ -13,7 +14,7 @@ const AddRooms = () => {
         desc: '',
         includes: '',
         roomtype: '',
-        img: '',
+        img: null,
     })
 
     const roomtpyes = [
@@ -24,16 +25,50 @@ const AddRooms = () => {
         { name: 'Executive Suites', value: 'executive-suites'},
         { name: 'Presidential Suites', value: 'presidential-suites'},
         { name: 'Honeymoon Suites', value: 'honeymoon-suites'},
-        { name: 'Royal Villa', value: 'royal-villa'},,
-    ]
+        { name: 'Royal Villa', value: 'royal-villa'}
+    ];
+    
+
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
+    
+        if (name === 'includes' && e.key === 'Enter') {
+            e.preventDefault();
+            setroomdata((prevData) => ({
+                ...prevData,
+                [name]: value + '\n' 
+            }));
+        } else {
+            setroomdata((prevData) => ({
+                ...prevData,
+                [name]: value
+            }));
+        }
+    };
+
+    const handleImageChange = (e) => {
+        const file = e.target.files[0];
         setroomdata((prevData) => ({
-          ...prevData,
-          [name]: value
+            ...prevData,
+            image: file
         }));
     };
+
+    const headleSubmit = (e) => {
+        e.preventDefault();
+        const formData = new FormData();
+        Object.keys(roomdata).forEach((key) => {
+            formData.append(key, roomdata[key]);
+        });
+
+        try{
+            
+        }
+        catch(err){
+            console.log(err)
+        }
+    }
 
   return (
     <div className='mt-4 mr-4'>
@@ -48,7 +83,7 @@ const AddRooms = () => {
             </div>
         </div>
 
-        <form method="post">
+        <form onSubmit={headleSubmit} method="post">
             <div className="grid md:grid-cols-4 gap-2">
                 <div className="w-full my-2">
                     <p className="">Room Size</p>
@@ -112,10 +147,10 @@ const AddRooms = () => {
                     <div className="w-full my-2">
                         <p className="">Room Cover Image</p>
                         <div className="mt-2">
-                            <DashImgeInput 
-                                name={'img'}
-                                accept={'image/*'}
-                                required={true}
+                            <DashSelect 
+                                name={'roomtype'}
+                                defaultoption={'Select Room Type'}
+                                optons={roomtpyes}
                                 onChange={handleInputChange}
                             />
                         </div>
@@ -129,7 +164,7 @@ const AddRooms = () => {
                                 name={'img'}
                                 accept={'image/*'}
                                 required={true}
-                                onChange={handleInputChange}
+                                onChange={handleImageChange}
                             />
                         </div>
                     </div>      
@@ -172,6 +207,12 @@ const AddRooms = () => {
                         </div>
                     </div>      
                 </div>
+            </div>
+
+            <div className="">
+                <button>
+                    Add Room
+                </button>
             </div>
 
 
