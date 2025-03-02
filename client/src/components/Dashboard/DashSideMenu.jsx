@@ -1,9 +1,11 @@
 import { BiSolidDashboard } from "react-icons/bi";
 import { BsGearFill } from "react-icons/bs";
-import { MdWork } from "react-icons/md";
-import { BiBuildings } from "react-icons/bi";
-import { FaBuildingShield } from "react-icons/fa6";
-import { FaUsers } from "react-icons/fa";
+import { MdOutlineDryCleaning  } from "react-icons/md";
+import { FaBed, FaPeopleGroup, FaUsers   } from "react-icons/fa6";
+import { BsCalendar2CheckFill } from "react-icons/bs";
+import { RiSecurePaymentLine } from "react-icons/ri";
+import { TbReportAnalytics } from "react-icons/tb";
+
 
 
 const sidemenu = [
@@ -16,19 +18,19 @@ const sidemenu = [
     {
         id: 2,
         name: "Room Management",
-        icon: MdWork,
+        icon: FaBed,
         link: '#'
     },
     {
         id: 3,
         name: "Booking Management",
-        icon: BiBuildings,
+        icon: BsCalendar2CheckFill,
         link: '#'
     },
     {
         id: 4,
         name: "Guest Management",
-        icon: FaBuildingShield,
+        icon: FaPeopleGroup,
         link: '#'
     },
     {
@@ -40,19 +42,19 @@ const sidemenu = [
     {
         id: 6,
         name: "Housekeeping",
-        icon: FaUsers,
+        icon: MdOutlineDryCleaning,
         link: '#'
     },
     {
         id: 7,
         name: "Payments & Transactions",
-        icon: FaUsers,
+        icon: RiSecurePaymentLine,
         link: '#'
     },
     {
         id: 8,
         name: "Reports & Analytics",
-        icon: FaUsers,
+        icon: TbReportAnalytics,
         link: '#'
     },
     {
