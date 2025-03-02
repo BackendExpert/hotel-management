@@ -13,6 +13,7 @@ import DashHome from "./pages/Dashboard/DashHome";
 import DashBoard from "./components/Dashboard/DashBoard";
 import PrivateRoute from "./components/Auth/PrivateRoute";
 import ManageRooms from "./pages/ManageRoom/ManageRooms";
+import AddRooms from "./pages/ManageRoom/AddRooms";
 
 
 
@@ -72,6 +73,7 @@ export default function App() {
         <Route path="/Dashboard/" element={ <PrivateRoute element={<DashBoard />} /> } >
           <Route path="Home" element={<DashHome /> } />
           <Route path="Rooms" element={<ManageRooms /> } />
+          <Route path="add-room" element={<AddRooms /> } />
         </Route>
         
       </Routes>

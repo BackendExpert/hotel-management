@@ -17,9 +17,11 @@ const ManageRooms = () => {
             </div>
         </div>
         <div className="mt-4">
-            <button className='bg-gradient-to-r from-[#ff7e60] to-[#ffc27c] px-8 py-2 text-white rounded duration-500'>
-                Add New Room
-            </button>
+            <a href="/Dashboard/add-room">
+                <button className='bg-gradient-to-r from-[#ff7e60] to-[#ffc27c] px-8 py-2 text-white rounded duration-500'>
+                    Add New Room
+                </button>
+            </a>
         </div>
         <div className="">
             <RoomAvailability />
