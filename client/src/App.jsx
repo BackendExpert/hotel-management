@@ -9,6 +9,9 @@ import 'aos/dist/aos.css';
 import Restaurant from "./pages/Restaurant/Restaurant";
 import HotelRoom from "./pages/HotelRooms/HotelRoom";
 import StaffLogin from "./pages/StaffAuth/StaffLogin";
+import DashHome from "./pages/Dashboard/DashHome";
+import DashBoard from "./components/Dashboard/DashBoard";
+import PrivateRoute from "./components/Auth/PrivateRoute";
 
 
 
@@ -64,6 +67,10 @@ export default function App() {
         <Route path="/hotel-restaurant" element={<Restaurant /> } />
         <Route path="/hotel-room/:roomtype" element={<HotelRoom /> } />
         <Route path="/staff-login" element={<StaffLogin /> } />
+
+        <Route path="/Dashboard/" element={ <PrivateRoute element={<DashBoard />} /> } >
+          <Route path="Home" element={<DashHome /> } />
+        </Route>
         
       </Routes>
       {shouldShowFooter && <Footer />}

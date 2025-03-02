@@ -3,8 +3,10 @@ import axios from 'axios'
 import LoginInput from '../../components/Form/LoginInput';
 import DefultBtn from '../../components/Buttons/DefultBtn';
 import secureLocalStorage  from 'react-secure-storage'
+import { useNavigate } from 'react-router-dom';
 
 const StaffLogin = () => {
+    const navigate = useNavigate()
     const [stafflogin, setstafflogin] = useState({
         staffid: '',
         email: '',
@@ -23,8 +25,9 @@ const StaffLogin = () => {
         e.preventDefault()
 
         try{    
-            const res = await axios.post(import.meta.env.VITE_APP_API + '/auth/login', stafflogin)
+            const res = await axios.post(import.meta.env.VITE_APP_API + '/auth/signin', stafflogin)
             if(res.data.Status === "Success"){
+                alert("Login Success")
                 navigate('/Dashboard/Home')                    
                 localStorage.setItem("login", res.data.Token)
                 secureLocalStorage.setItem("loginE", res.data.Result.email)
