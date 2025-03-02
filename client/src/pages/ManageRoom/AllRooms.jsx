@@ -8,7 +8,7 @@ const AllRooms = () => {
                 <tr className='h-12 border-b border-[#4cdd94] text-[#4cdd94]'>
                     <th className='font-semibold'>Room ID</th>
                     <th>Room Code</th>
-                    <th>Room Location</th>
+                    <th>Room Type</th>
                     <th>Status</th>
                 </tr>
             </thead>
