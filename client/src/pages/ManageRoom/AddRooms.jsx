@@ -107,19 +107,36 @@ const AddRooms = () => {
                 </div>               
             </div>
 
-            <div className="">
-                <div className="w-full my-2">
-                    <p className="">Room Cover Image</p>
-                    <div className="mt-2">
-                        <DashImgeInput 
-                            name={'img'}
-                            accept={'image/*'}
-                            required={true}
-                            onChange={handleInputChange}
-                        />
-                    </div>
-                </div>      
+            <div className="flex justfy-between">
+                <div className="w-full mr-2">
+                    <div className="w-full my-2">
+                        <p className="">Room Cover Image</p>
+                        <div className="mt-2">
+                            <DashImgeInput 
+                                name={'img'}
+                                accept={'image/*'}
+                                required={true}
+                                onChange={handleInputChange}
+                            />
+                        </div>
+                    </div>      
+                </div>
+                <div className="w-full ml-2">
+                    <div className="w-full my-2">
+                        <p className="">Room Cover Image</p>
+                        <div className="mt-2">
+                            <DashImgeInput 
+                                name={'img'}
+                                accept={'image/*'}
+                                required={true}
+                                onChange={handleInputChange}
+                            />
+                        </div>
+                    </div>      
+                </div>
             </div>
+
+
 
             <div className="flex justify-between">
                 <div className="w-full mr-2">
