@@ -77,8 +77,8 @@ const authController = {
 
 
             const checkuser = await User.findOne({
-                $or: [
-                    { username: username },
+                $and: [
+                    { email: email },
                     { staffid: staffid },
                 ]
             })
