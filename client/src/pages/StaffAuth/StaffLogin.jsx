@@ -61,7 +61,7 @@ const StaffLogin = () => {
                             />
                         </div>
                         <div className="py-2">
-                            <p className="">Password : </p>
+                            <p className="">Staff Email : </p>
                             <LoginInput 
                                 type={'email'}
                                 placeholder={"Staff Email"}
