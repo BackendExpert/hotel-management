@@ -83,7 +83,7 @@ const DashSide = () => {
                 }
             }
             else if(RoleUser === "staff"){
-                if(menu.id !== 3){
+                if(menu.id !== 5 && menu.id !== 8){
                     return (
                         <Link to={menu.link} key={menu.id}>
                           <div

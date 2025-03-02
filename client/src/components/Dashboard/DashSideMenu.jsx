@@ -15,30 +15,48 @@ const sidemenu = [
     },
     {
         id: 2,
-        name: "Jobs",
+        name: "Room Management",
         icon: MdWork,
         link: '#'
     },
     {
         id: 3,
-        name: "Companies",
+        name: "Booking Management",
         icon: BiBuildings,
         link: '#'
     },
     {
         id: 4,
-        name: "My Company",
+        name: "Guest Management",
         icon: FaBuildingShield,
         link: '#'
     },
     {
         id: 5,
-        name: "Applicants",
+        name: "Staff Management",
         icon: FaUsers,
         link: '#'
     },
     {
         id: 6,
+        name: "Housekeeping",
+        icon: FaUsers,
+        link: '#'
+    },
+    {
+        id: 7,
+        name: "Payments & Transactions",
+        icon: FaUsers,
+        link: '#'
+    },
+    {
+        id: 8,
+        name: "Reports & Analytics",
+        icon: FaUsers,
+        link: '#'
+    },
+    {
+        id: 9,
         name: "Settings",
         icon: BsGearFill,
         link: '#'
