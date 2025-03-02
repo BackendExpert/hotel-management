@@ -64,7 +64,7 @@ const DashSide = () => {
         {sidemenu.map((menu, index) => {
           const isActive = currentID === String(menu.id); // Ensure comparison works
             if(RoleUser === "admin"){
-                if(menu.id !== 4){
+                
                     return (
                         <Link to={menu.link} key={menu.id}>
                           <div
@@ -80,7 +80,7 @@ const DashSide = () => {
                           </div>
                         </Link>
                     );
-                }
+                
             }
             else if(RoleUser === "staff"){
                 if(menu.id !== 5 && menu.id !== 8){

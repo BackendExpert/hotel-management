@@ -8,7 +8,7 @@ const DashHome = () => {
     const EmailUser = secureLocalStorage.getItem('loginE')
     const Username = secureLocalStorage.getItem('loginU')
   return (
-    <div className='mt-4'>
+    <div className='mt-4 mr-4'>
         {
             (() => {
                 if(RoleUser === "admin"){
