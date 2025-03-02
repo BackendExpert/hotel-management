@@ -38,9 +38,9 @@ const Dashbaord = () => {
                         onClick={headlemenuopen}
                         >
                         {openside ? (
-                            <MdOutlineClose className="fill-[#0f5a97] h-8 w-auto" />
+                            <MdOutlineClose className="fill-[#a4805a] h-8 w-auto" />
                         ) : (
-                            <TiThMenu className="fill-[#0f5a97] h-8 w-auto" />
+                            <TiThMenu className="fill-[#a4805a] h-8 w-auto" />
                         )}
                     </button>
                 
