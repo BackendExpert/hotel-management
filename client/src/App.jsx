@@ -68,7 +68,7 @@ export default function App() {
         <Route path="/staff-login" element={<StaffLogin /> } />
 
         <Route path="/Dashboard/" element={<DashBoard /> } >
-          <Route path="Home" element={<Home /> } />
+          <Route path="Home" element={<DashHome /> } />
         </Route>
         
       </Routes>
