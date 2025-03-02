@@ -2,6 +2,7 @@ import React from 'react'
 import { BiSolidDashboard } from "react-icons/bi";
 import AdminData from './AdminData';
 import RoomAvailability from './RoomAvailability';
+import LatestBookingMonthly from './LatestBookingMonthly';
 
 const AdminDashbaord = () => {
 
@@ -25,6 +26,10 @@ const AdminDashbaord = () => {
 
         <div className="">
             <RoomAvailability />
+        </div>
+
+        <div className="">
+            <LatestBookingMonthly />
         </div>
         
 
