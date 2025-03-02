@@ -19,7 +19,7 @@ const sidemenu = [
         id: 2,
         name: "Room Management",
         icon: FaBed,
-        link: '#'
+        link: '/Dashboard/Rooms'
     },
     {
         id: 3,
