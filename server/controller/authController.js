@@ -20,7 +20,8 @@ const authController = {
             const {
                 username,
                 email,
-                password
+                password,
+                staffid,
             } = req.body
 
             if (!validator.isEmail(email)) {
@@ -34,6 +35,7 @@ const authController = {
             const checkuser = await User.findOne({
                 $or: [
                     { username: username },
+                    { staffid: staffid },
                     { email: email },
                 ]
             })
@@ -47,7 +49,8 @@ const authController = {
             const newuser = new User({
                 username: username,
                 email: email,
-                password: hashpass
+                password: hashpass,
+                staffid: staffid
             })
 
             const newresultuser = await newuser.save()
@@ -67,6 +70,7 @@ const authController = {
     signin: async(req, res) => {
         try{
             const {
+                staffid,
                 email,
                 password
             } = req.body
