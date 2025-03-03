@@ -16,13 +16,23 @@ const ManageRooms = () => {
                 <h1 className="text-[#a4805a] text-xl pt-1 font-semibold uppercase">Room Management</h1>
             </div>
         </div>
-        <div className="mt-4">
-            <a href="/Dashboard/add-room">
-                <button className='bg-gradient-to-r from-[#ff7e60] to-[#ffc27c] px-8 py-2 text-white rounded duration-500'>
-                    Add New Room
-                </button>
-            </a>
+        <div className="flex">
+            <div className="mt-4 mx-4">
+                <a href="/Dashboard/add-room">
+                    <button className='bg-gradient-to-r from-[#ff7e60] to-[#ffc27c] px-8 py-2 text-white rounded duration-500'>
+                        Add New Room
+                    </button>
+                </a>
+            </div>
+            <div className="mt-4 mx-4">
+                <a href="/Dashboard/add-room">
+                    <button className='bg-gradient-to-r from-[#ff7e60] to-[#ffc27c] px-8 py-2 text-white rounded duration-500'>
+                        Add Room Features
+                    </button>
+                </a>
+            </div>
         </div>
+
         <div className="">
             <RoomAvailability />
         </div>
