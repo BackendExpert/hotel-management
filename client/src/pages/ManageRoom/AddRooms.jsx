@@ -7,10 +7,12 @@ import DashSelect from '../../components/Form/DashSelect';
 
 const AddRooms = () => {
     const [roomdata, setroomdata] = useState({
+        roomcode: '',
         roomsize: '',
         guests: '',
         beds: '',
         bathrooms: '',
+        roomlocation: '',
         desc: '',
         includes: '',
         roomtype: '',
@@ -26,6 +28,15 @@ const AddRooms = () => {
         { name: 'Presidential Suites', value: 'presidential-suites'},
         { name: 'Honeymoon Suites', value: 'honeymoon-suites'},
         { name: 'Royal Villa', value: 'royal-villa'}
+    ];
+
+
+    const roomplace = [
+        { name: 'Near Elevator', value: 'near-elevator' },
+        { name: 'City View', value: 'city-view' },
+        { name: 'Garden View', value: 'garden-view' },
+        { name: 'Poolside', value: 'poolside' },
+        { name: 'Penthouse', value: 'penthouse' }
     ];
     
 
@@ -86,6 +97,20 @@ const AddRooms = () => {
         <form onSubmit={headleSubmit} method="post">
             <div className="grid md:grid-cols-4 gap-2">
                 <div className="w-full my-2">
+                    <p className="">Room Code</p>
+                    <div className="mt-2">
+                        <DashInput 
+                            type={'text'}
+                            name={'roomcode'}
+                            value={roomdata.roomcode}
+                            placeholder={"Room Code"}
+                            required={true}
+                            onChange={handleInputChange}
+                        />
+                    </div>
+                </div>
+
+                <div className="w-full my-2">
                     <p className="">Room Size</p>
                     <div className="mt-2">
                         <DashInput 
@@ -139,7 +164,19 @@ const AddRooms = () => {
                             onChange={handleInputChange}
                         />
                     </div>
-                </div>               
+                </div>    
+                
+                <div className="w-full my-2">
+                    <p className="">Room Location</p>
+                    <div className="mt-2">
+                        <DashSelect 
+                            name={'roomlocation'}
+                            defaultoption={'Select Room Location'}
+                            optons={roomplace}
+                            onChange={handleInputChange}
+                        />
+                    </div>
+                </div>                            
             </div>
 
             <div className="flex justfy-between">
